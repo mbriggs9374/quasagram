@@ -1,0 +1,21 @@
+{
+  "name": "backend",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "nodemon index.js",
+    "deploy": "heroku builds:create -a quasagram-briggs-backend",
+    "web-push": "web-push"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "busboy": "^0.3.1",
+    "express": "^4.17.1",
+    "firebase-admin": "^10.0.0",
+    "nodemon": "^2.0.13",
+    "uuid-v4": "^0.1.0",
+    "web-push": "^3.4.5"
+  }
+}

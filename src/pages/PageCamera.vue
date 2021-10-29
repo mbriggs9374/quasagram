@@ -69,6 +69,7 @@
         <q-btn
           :disable="!post.caption || !post.photo"
           @click="addPost"
+          class="q-mb-lg"
           color="primary"
           label="Post Image"
           rounded

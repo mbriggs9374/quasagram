@@ -229,6 +229,7 @@ export default {
       let postCreated = this.$q.localStorage.getItem("postCreated");
       if (this.$q.platform.is.android && !postCreated && !navigator.onLine) {
         this.addPostError();
+        this.$q.loading.hide();
       } else {
         let formData = new FormData();
         formData.append("id", this.post.id);
@@ -241,7 +242,7 @@ export default {
           .post(`${process.env.API}/createPost`, formData)
           .then((response) => {
             console.log("response:", response);
-            this.$q.localStorage.set("postCreate", true);
+            this.$q.localStorage.set("postCreated", true);
             this.$router.push("/");
             this.$q.notify({
               message: "Post created!",
